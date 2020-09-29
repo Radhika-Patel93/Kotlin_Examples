@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.demo.kotlinexamples.R
+import com.demo.kotlinexamples.activity.DatePickerActivity
 import com.demo.kotlinexamples.activity.RecyclerViewActivity
 import com.demo.kotlinexamples.activity.SplashActivity
+import com.demo.kotlinexamples.activity.TimePickerActivity
 import com.demo.kotlinexamples.model.Model
 import kotlinx.android.synthetic.main.row_list.view.*
 
@@ -22,8 +24,11 @@ class Adapter(val context: RecyclerViewActivity, val list: ArrayList<Model>): Re
         holder.bindItems(list[position])
 
         holder.itemView.setOnClickListener {
-            context.startActivity(Intent(context,SplashActivity::class.java))
-            context.finish()
+            if (position == 0){
+                context.startActivity(Intent(context, DatePickerActivity::class.java))
+            }else if (position == 1){
+                context.startActivity(Intent(context, TimePickerActivity::class.java))
+            }
         }
     }
 

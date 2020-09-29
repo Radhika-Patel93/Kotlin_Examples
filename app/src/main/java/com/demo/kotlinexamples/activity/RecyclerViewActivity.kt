@@ -30,16 +30,8 @@ class RecyclerViewActivity : AppCompatActivity() {
     private fun setAdapter(){
 
         val list = ArrayList<Model>();
-        list.add(Model("One",R.mipmap.ic_launcher))
-        list.add(Model("Two",R.mipmap.ic_launcher))
-        list.add(Model("Three",R.mipmap.ic_launcher))
-        list.add(Model("Four",R.mipmap.ic_launcher))
-        list.add(Model("Five",R.mipmap.ic_launcher))
-        list.add(Model("Six",R.mipmap.ic_launcher))
-        list.add(Model("Seven",R.mipmap.ic_launcher))
-        list.add(Model("Eight",R.mipmap.ic_launcher))
-        list.add(Model("Nine",R.mipmap.ic_launcher))
-        list.add(Model("Ten",R.mipmap.ic_launcher))
+        list.add(Model("Date Picker Sample",R.mipmap.ic_launcher))
+        list.add(Model("Time Picker Sample",R.mipmap.ic_launcher))
 
         recyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         recyclerview.adapter = Adapter(this, list)
