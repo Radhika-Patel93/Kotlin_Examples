@@ -33,6 +33,7 @@ class RecyclerViewActivity : AppCompatActivity() {
         list.add(Model("Date Picker Sample",R.mipmap.ic_launcher))
         list.add(Model("Time Picker Sample",R.mipmap.ic_launcher))
         list.add(Model("Retrofit Sample",R.mipmap.ic_launcher))
+        list.add(Model("Get Firebase Data",R.mipmap.ic_launcher))
 
         recyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         recyclerview.adapter = Adapter(this, list)
