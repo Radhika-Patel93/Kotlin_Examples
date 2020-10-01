@@ -29,6 +29,7 @@ object Realtime_Database {
 
                     initDatabase(context)
                     saveDataInDatabase(context, index, it.key.toString(), Gson().toJson(it.value))
+//                    StringToJson(Gson().toJson(it.value))
                 }
 
                 fetchAllData(context)
@@ -62,8 +63,8 @@ object Realtime_Database {
             db.todoDao().getAll().forEach()
             {
                 println("Fetch Records Id:  : ${it.id}")
-                println("Fetch Records Name:  : ${it.key}")
-                println("Fetch Records Name:  : ${it.value}")
+                println("Fetch Records Key:  : ${it.key}")
+                println("Fetch Records Value:  : ${it.value}")
             }
 
             println("Fetch Records:  : ${db.todoDao().getAll().size}")
@@ -71,4 +72,14 @@ object Realtime_Database {
         thread.start()
 
     }
+
+//    fun StringToJson(data: String) {
+//        val gson = Gson()
+//        val mapType = object : TypeToken<Map<String, Any>>() {}.type
+//
+//        var tutorialMap: Map<String, Any> = gson.fromJson(data, object : TypeToken<Map<String, Any>>() {}.type)
+//        tutorialMap.forEach {
+//            println("StringToJson: "+it.key+"  ||  "+it.value)
+//        }
+//    }
 }
