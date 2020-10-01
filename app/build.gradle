@@ -30,6 +30,7 @@ def retrofitVersion = '2.3.0'
 def daggerVersion = '2.13'
 def glideVersion = '4.9.0'
 def rxJavaVersion = '2.1.1'
+def room_version = "2.2.5"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -47,7 +48,13 @@ dependencies {
 
     implementation "com.google.dagger:dagger:$daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+
     implementation 'com.google.firebase:firebase-database-ktx:19.4.0'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
@@ -61,5 +68,4 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0-beta04'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
 
-    implementation 'com.google.firebase:firebase-analytics:17.5.0'
 }

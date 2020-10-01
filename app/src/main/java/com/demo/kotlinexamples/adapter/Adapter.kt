@@ -29,7 +29,7 @@ class Adapter(val context: RecyclerViewActivity, val list: ArrayList<Model>): Re
             }else if (position == 2){
                 context.startActivity(Intent(context, RetrofitSampleActivity::class.java))
             }else if (position == 3){
-                Realtime_Database.getAllData()
+                Realtime_Database.getAllData(context)
             }
         }
     }
