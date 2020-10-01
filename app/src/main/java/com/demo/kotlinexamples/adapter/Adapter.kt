@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.demo.kotlinexamples.R
 import com.demo.kotlinexamples.activity.*
+import com.demo.kotlinexamples.firebase.Realtime_Database
 import com.demo.kotlinexamples.model.Model
 import kotlinx.android.synthetic.main.row_list.view.*
 
@@ -27,6 +28,8 @@ class Adapter(val context: RecyclerViewActivity, val list: ArrayList<Model>): Re
                 context.startActivity(Intent(context, TimePickerActivity::class.java))
             }else if (position == 2){
                 context.startActivity(Intent(context, RetrofitSampleActivity::class.java))
+            }else if (position == 3){
+                Realtime_Database.getAllData()
             }
         }
     }
